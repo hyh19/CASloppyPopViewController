@@ -7,9 +7,9 @@
 //
 
 #import "CASloppyNavigationControllerDelegate.h"
-#import "CANavigationAnimator.h"
+#import "CANavigationAnimationSlide.h"
 
-@interface CASloppyNavigationControllerDelegate () <UIGestureRecognizerDelegate, CANavigationAnimatorDelegate> {
+@interface CASloppyNavigationControllerDelegate () <UIGestureRecognizerDelegate, CANavigationAnimationDelegate> {
     BOOL _transitioning;
 }
 
@@ -65,13 +65,13 @@
 
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
 {
-    CANavigationAnimator *animator = [CANavigationAnimator new];
-    animator.delegate = self;
-    animator.operation = operation;
+    CANavigationAnimationSlide *animation = [CANavigationAnimationSlide new];
+    animation.delegate = self;
+    animation.operation = operation;
     if (self.interactionController != nil) {
-        animator.curve = UIViewAnimationOptionCurveLinear;
+        animation.curve = UIViewAnimationOptionCurveLinear;
     }
-    return animator;
+    return animation;
 }
 
 - (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController
@@ -86,7 +86,7 @@
     return YES;
 }
 
--(void)navigationAnimatorDidFinish:(CANavigationAnimator *)animator {
+-(void)navigationAnimationDidFinish:(CANavigationAnimation *)animator {
     _transitioning = NO;
 }
 
