@@ -8,11 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger, CANavigationAnimatorType) {
-    CANavigationAnimatorTypePush,
-    CANavigationAnimatorTypePop
-};
-
 @class CANavigationAnimator;
 @protocol CANavigationAnimatorDelegate <NSObject>
 
@@ -22,7 +17,7 @@ typedef NS_ENUM(NSUInteger, CANavigationAnimatorType) {
 
 @interface CANavigationAnimator : NSObject <UIViewControllerAnimatedTransitioning>
 
-@property (nonatomic, assign) CANavigationAnimatorType type;
+@property (nonatomic, assign) UINavigationControllerOperation operation;
 @property (nonatomic, assign) UIViewAnimationOptions curve;
 @property (nonatomic, weak) id<CANavigationAnimatorDelegate>delegate;
 

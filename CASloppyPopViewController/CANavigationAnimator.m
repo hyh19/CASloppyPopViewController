@@ -13,7 +13,7 @@
 -(id)init {
     self = [super init];
     if (self) {
-        self.type = CANavigationAnimatorTypePop;
+        self.operation = UINavigationControllerOperationPop;
         self.curve = UIViewAnimationOptionCurveEaseInOut;
     }
     return self;
@@ -26,15 +26,19 @@
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
 {
+    if (self.operation == UINavigationControllerOperationNone) {
+        return;
+    }
+
     UIViewController* toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     UIViewController* fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     [[transitionContext containerView] addSubview:toViewController.view];
 
     CGFloat offset;
-    if (self.type == CANavigationAnimatorTypePush) {
-        offset = fromViewController.view.frame.size.width;
-    } else {
+    if (self.operation == UINavigationControllerOperationPop) {
         offset = -toViewController.view.frame.size.width;
+    } else {
+        offset = fromViewController.view.frame.size.width;
     }
 
     CGRect toStartFrame = toViewController.view.frame;

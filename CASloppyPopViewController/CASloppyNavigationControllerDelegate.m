@@ -65,24 +65,13 @@
 
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
 {
-    if (operation == UINavigationControllerOperationPop) {
-        CANavigationAnimator *animator = [CANavigationAnimator new];
-        animator.delegate = self;
-        animator.type = CANavigationAnimatorTypePop;
-        if (self.interactionController != nil) {
-            animator.curve = UIViewAnimationOptionCurveLinear;
-        }
-        return animator;
-    } else if (operation == UINavigationControllerOperationPush) {
-        CANavigationAnimator *animator = [CANavigationAnimator new];
-        animator.delegate = self;
-        animator.type = CANavigationAnimatorTypePush;
-        if (self.interactionController != nil) {
-            animator.curve = UIViewAnimationOptionCurveLinear;
-        }
-        return animator;
+    CANavigationAnimator *animator = [CANavigationAnimator new];
+    animator.delegate = self;
+    animator.operation = operation;
+    if (self.interactionController != nil) {
+        animator.curve = UIViewAnimationOptionCurveLinear;
     }
-    return nil;
+    return animator;
 }
 
 - (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController
