@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>09126B72-8922-4E42-BB9E-CAED529C25E6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CASloppyPopViewController</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>04139F28-729A-46D4-BBC2-0BC39A29C08F</key>
+		<string>ssh://github.com/chrisalbert/CASloppyPopViewController.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CASloppyPopViewController.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>04139F28-729A-46D4-BBC2-0BC39A29C08F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/chrisalbert/CASloppyPopViewController.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>04139F28-729A-46D4-BBC2-0BC39A29C08F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>04139F28-729A-46D4-BBC2-0BC39A29C08F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CASloppyPopViewController</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -8,6 +8,13 @@
 
 #import "CAAppDelegate.h"
 #import "CASloppyExampleViewController.h"
+#import "CASloppyNavigationControllerDelegate.h"
+
+@interface CAAppDelegate()
+
+@property (nonatomic, strong) CASloppyNavigationControllerDelegate *navigationDelegate;
+
+@end
 
 @implementation CAAppDelegate
 
@@ -15,11 +22,13 @@
 {
     CASloppyExampleViewController *example = [[CASloppyExampleViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:example];
+    CASloppyNavigationControllerDelegate *navigationDelegate = [[CASloppyNavigationControllerDelegate alloc] initWithNavigationController:nav];
+    self.navigationDelegate = navigationDelegate;
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
-    
+
     return YES;
 }
 							

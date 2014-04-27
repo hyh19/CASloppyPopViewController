@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8328409F190D3E9B00C93744 /* CANavigationAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8328409C190D3E9B00C93744 /* CANavigationAnimator.m */; };
+		832840A0190D3E9B00C93744 /* CASloppyNavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8328409E190D3E9B00C93744 /* CASloppyNavigationControllerDelegate.m */; };
 		83504465190C64FC00E96B39 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83504464190C64FC00E96B39 /* Foundation.framework */; };
 		83504467190C64FC00E96B39 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83504466190C64FC00E96B39 /* CoreGraphics.framework */; };
 		83504469190C64FC00E96B39 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83504468190C64FC00E96B39 /* UIKit.framework */; };
@@ -33,6 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8328409B190D3E9B00C93744 /* CANavigationAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CANavigationAnimator.h; sourceTree = "<group>"; };
+		8328409C190D3E9B00C93744 /* CANavigationAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CANavigationAnimator.m; sourceTree = "<group>"; };
+		8328409D190D3E9B00C93744 /* CASloppyNavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CASloppyNavigationControllerDelegate.h; sourceTree = "<group>"; };
+		8328409E190D3E9B00C93744 /* CASloppyNavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CASloppyNavigationControllerDelegate.m; sourceTree = "<group>"; };
 		83504461190C64FC00E96B39 /* CASloppyPopViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CASloppyPopViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83504464190C64FC00E96B39 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83504466190C64FC00E96B39 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -110,6 +116,10 @@
 		8350446A190C64FC00E96B39 /* CASloppyPopViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8328409B190D3E9B00C93744 /* CANavigationAnimator.h */,
+				8328409C190D3E9B00C93744 /* CANavigationAnimator.m */,
+				8328409D190D3E9B00C93744 /* CASloppyNavigationControllerDelegate.h */,
+				8328409E190D3E9B00C93744 /* CASloppyNavigationControllerDelegate.m */,
 				83504473190C64FC00E96B39 /* CAAppDelegate.h */,
 				83504474190C64FC00E96B39 /* CAAppDelegate.m */,
 				83504479190C64FD00E96B39 /* CASloppyExampleViewController.h */,
@@ -246,6 +256,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8328409F190D3E9B00C93744 /* CANavigationAnimator.m in Sources */,
+				832840A0190D3E9B00C93744 /* CASloppyNavigationControllerDelegate.m in Sources */,
 				83504475190C64FC00E96B39 /* CAAppDelegate.m in Sources */,
 				83504471190C64FC00E96B39 /* main.m in Sources */,
 				8350447B190C64FD00E96B39 /* CASloppyExampleViewController.m in Sources */,
