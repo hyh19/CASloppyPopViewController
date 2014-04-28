@@ -56,7 +56,7 @@
     } else if (recognizer.state == UIGestureRecognizerStateChanged) {
         [self.interactionController updateInteractiveTransition:progress];
     } else if (recognizer.state == UIGestureRecognizerStateEnded) {
-        if ([recognizer velocityInView:view].x > 0 && progress > 0.25) {
+        if ([recognizer velocityInView:view].x > 0 && progress > 0.2) {
             [self.interactionController finishInteractiveTransition];
         } else {
             [self.interactionController cancelInteractiveTransition];
