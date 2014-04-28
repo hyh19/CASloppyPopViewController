@@ -28,6 +28,8 @@
         self.navigationController.interactivePopGestureRecognizer.delegate = self;
         navigationController.delegate = self;
         [self activatePan];
+
+        self.animationClass = [CANavigationAnimationSlide class];
     }
     return self;
 }
@@ -65,7 +67,7 @@
 
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
 {
-    CANavigationAnimationSlide *animation = [CANavigationAnimationSlide new];
+    CANavigationAnimationSlide *animation = [self.animationClass new];
     animation.delegate = self;
     animation.operation = operation;
     if (self.interactionController != nil) {

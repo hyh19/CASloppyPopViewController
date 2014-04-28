@@ -10,6 +10,8 @@
 
 @interface CASloppyNavigationControllerDelegate : NSObject <UINavigationControllerDelegate>
 
+@property (nonatomic, strong) Class animationClass;
+
 -(id)initWithNavigationController:(UINavigationController *)navigationController;
 
 @end
